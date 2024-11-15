@@ -1,0 +1,80 @@
+.container {
+    padding: 1rem 1rem 5rem;
+}
+
+.tableContainer {
+    overflow-x: auto;
+    width: 700px;
+}
+
+.table {
+    list-style-type: none;
+    padding: 0;
+    margin: 1rem 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.tableHeader {
+    display: flex;
+    background-color: #ad5778;
+    color: white;
+    padding: 0.75rem;
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+}
+
+.tableHeader span {
+    flex: 1;
+    padding: 1rem;
+    text-align: left;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: fit-content;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 30px;
+    padding-bottom: 8px;
+    background: linear-gradient(currentColor 0 0) 0 100%/0% 3px no-repeat;
+    animation: l2 2s linear infinite;
+    color: #ad5778;
+}
+
+.loader:before {
+    content: "Loading..."
+}
+
+.errorMsg {
+    font-size: 1.5rem;
+    color: #f3317b;
+    margin-top: 3rem;
+}
+
+
+@keyframes l2 {
+    to {
+        background-size: 100% 3px
+    }
+}
+@media (max-width: 768px) {
+    .tableContainer{
+        width: auto;
+    }
+    .tableRow span,
+    .tableHeader span {
+        padding: 0 0.75rem;
+    }
+    .container{
+        padding: 2rem 0 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tableHeader {
+        padding:  0.75rem 0;
+    }
+}

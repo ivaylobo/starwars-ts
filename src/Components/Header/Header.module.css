@@ -1,0 +1,77 @@
+/* General header styling */
+header {
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    height: 5rem;
+}
+
+.headerNavigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.headerNavigation ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.headerNavigation ul li {
+    margin: 0;
+}
+
+.headerNavigation ul li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.headerNavigation ul li a.active{
+    color: #F3317BFF;
+}
+
+.headerNavigation ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Welcome message styling */
+.userText {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin: 20px 0;
+}
+
+input[type='button'].logged{
+    background: #ad5778;
+}
+
+input[type='button'].unlogged{
+    background: #81a9f0;
+}
+
+/* Responsive: Mobile view */
+@media (max-width: 768px) {
+    header{
+        display: block;
+        text-align: center;
+        height: auto;
+    }
+
+    .headerNavigation ul, .headerNavigation {
+        display: block;
+        text-align: center;
+    }
+
+    .headerNavigation ul li{
+        margin-bottom: 10px;
+    }
+}
